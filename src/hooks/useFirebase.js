@@ -33,9 +33,11 @@ const useFirebase = () => {
       if (user) {
         console.log("inside state change", user);
         setUser(user);
+      }else{
+        setUser({})
       }
     });
-  }, []);
+  }, [auth]);
 
   const logout = () => {
     signOut(auth).then(() => {
