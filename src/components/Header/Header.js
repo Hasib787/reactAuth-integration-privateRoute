@@ -1,11 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import AuthProvider from "../../context/AuthProvider";
-import useFirebase from "../../hooks/useFirebase";
+import useAuth from "../../hooks/useAuth";
 import "./Header.style.css";
 
 const Header = () => {
-  const { user, logout } = useFirebase();
+  const { user, logout } = useAuth();
   return (
     <div className="header">
       <NavLink to="/home">Home</NavLink>
